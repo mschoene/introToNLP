@@ -1,0 +1,144 @@
+\documentclass[11pt]{article}
+
+% Language setting
+% Replace `english' with e.g. `spanish' to change the document language
+\usepackage[english]{babel}
+
+% Set page size and margins
+% Replace `letterpaper' with`a4paper' for UK/EU standard size
+\usepackage[a4paper,top=2cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+
+% Useful packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage[most]{tcolorbox}
+
+\title{Title \\
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Example]
+  Predicting the Price of Food from Restaurant Menus
+\end{tcolorbox}
+
+}
+\author{Mathias Müller}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The abstract is a summary of the entire report in just a few sentences.
+\end{abstract}
+
+\section{Introduction}
+
+\begin{itemize}
+    \item What problem did I work on?
+    \item Which major area of NLP is this about?
+\end{itemize}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Example]
+  I was working on predicting the price of dishes from the text of restaurant menus.
+  Overall, this is a regression problem that has text as input.
+\end{tcolorbox}
+
+\section{Data set}
+
+\begin{itemize}
+    \item What data set did I choose?
+    \item How was this data set constructed?
+    \item Which information is included, which meta data?
+    \item Why did I choose this dataset?
+    \item What would have been other options?
+\end{itemize}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Example]
+  I chose the \textit{Uber Eats Menus} data set.
+  The dataset was constructed by scraping the menu text and prices of food advertised by restaurants on Uber Eats.
+  Each menu item also comes with a restaurant ID and user reviews.
+  I think this is the best dataset for this task because it is the biggest and most diverse dataset.
+  I could have used the \textit{Open Recipes Data Dump} instead, which would have made the task about prediction from the recipe text instead of the menu description.
+\end{tcolorbox}
+
+\section{Preprocessing}
+
+\begin{itemize}
+    \item Did I apply any auxiliary NLP tasks to preprocess the data?
+    \item If yes, why?
+    \item If yes, how exactly, using which tools?
+\end{itemize}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Example]
+  I applied the preprocessing that spacy applies to input text by default. This means sentence segmentation, tokenization, ...
+  Then I represented each input document as the average of the embeddings for the words it contains.
+\end{tcolorbox}
+
+\section{Model training}
+
+\begin{itemize}
+    \item What model did I train?
+    \item Why did I choose this kind of model?
+\end{itemize}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Example]
+  I trained a linear regression model with scikit-learn.
+  I think this model is well-suited for a regression task and it is simple to interpret what the model learns.
+\end{tcolorbox}
+
+\section{Evaluation}
+
+\begin{itemize}
+    \item How did I evaluate my model?
+    \item Why did I choose exactly this evaluation method?
+    \item What is the main outcome of the evaluation?
+\end{itemize}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Example]
+  I evaluated my model with mean absolute error.
+  I think that is a standard evaluation metric for regression tasks, and I believe it is the most simple to understand.
+  The mean absolute error of my model is 4.5, meaning that on average, the price predicted by the model is off by 4.5 dollars.
+\end{tcolorbox}
+
+\section{Future work}
+
+\begin{itemize}
+    \item How could my work be extended in the future?
+\end{itemize}
+
+\begin{tcolorbox}[colback=green!5!white,colframe=green!75!black,title=Example]
+  In the future, someone could extend my work by also predicting the average rating from user reviews, or seeing if the price and review score are related.
+\end{tcolorbox}
+
+\clearpage
+
+\section{Additional ideas for sections (not mandatory)}
+
+\subsection{Levels of linguistic organization}
+
+\begin{itemize}
+    \item Which areas of linguistics matter for this problem?
+\end{itemize}
+
+\subsection{Kinds of machine learning}
+
+\begin{itemize}
+    \item What kind of machine learning is involved?
+    \item Did I do a data split myself?
+    \item Did I have to choose hyperparameters?
+\end{itemize}
+
+\subsection{Representations of language}
+
+\begin{itemize}
+    \item Am I using a sequence-to-sequence model?
+    \item Are there embeddings in my model?
+\end{itemize}
+
+\subsection{Current challenges}
+
+\begin{itemize}
+    \item What is currently challenging in this area?
+    \item How can the state of diversity be summarized in this area?
+\end{itemize}
+
+\end{document}
